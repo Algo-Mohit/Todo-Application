@@ -1,0 +1,103 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block contant %}
+
+<!-- HERO -->
+<section style="background: linear-gradient(135deg, #3a0ca3, #7209b7, #240046); padding: 90px 0;">
+    <div class="container text-center text-white">
+        <h1 class=" display-5 mb-3 heading-premium"> About Our To-Do App</h1>
+        <p class="lead fs-4 px-md-5">
+            We believe smart planning leads to smart living — and our To-Do App is designed to make every day productive,
+            organized and stress-free.
+        </p>
+    </div>
+</section>
+
+<!-- OUR VISION -->
+<section class="container my-5 py-3">
+    <h2 class="heading-premium text-center mb-4" style="font-size:6vh;"> Our Vision</h2>
+    <p class="lead text-center px-md-5">
+        Life becomes easier when you manage time wisely.  
+        Our vision is to make productivity effortless for everyone — students, professionals, business owners,
+        creators and anyone who wants control over their goals.
+    </p>
+</section>
+
+<!-- IMAGE & STORY -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 mb-4">
+            <img src="{% static 'image/4904579.jpg' %}" class="img-fluid rounded shadow" alt="productivity image">
+        </div>
+        <div class="col-md-6">
+            <h2 class="heading-premium mb-3 " style="font-size:6vh;"> Why This App Is Different</h2>
+            <p class="lead">
+                We don’t overload you with unnecessary features.  
+                Instead, we focus on what truly matters — planning your day in seconds, staying organized and
+                completing tasks without any stress.
+            </p>
+            <p>
+                Every element of this app is created with one purpose:
+                <strong>help you take control of your time and daily life easily.</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="container my-5">
+    <h2 class="heading-premium text-center mb-5" style="font-size:6vh;"> What You Get With Our To-Do App</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 shadow h-100 border-0">
+                <h4> Quick Task Management</h4>
+                <p>Add, edit and remove tasks instantly without confusion.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 shadow h-100 border-0">
+                <h4> Clear Priority Focus</h4>
+                <p>Keep the most important work in front — no distractions.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 shadow h-100 border-0">
+                <h4> Progress & Motivation</h4>
+                <p>Completing tasks gives a sense of achievement every day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR VALUES -->
+<section class="container my-5 py-4">
+    <h2 class="heading-premium text-center mb-4" style="font-size:6vh;"> What We Stand For</h2>
+    <ul class="lead text-center" style="list-style:none; padding:0;">
+        <li># Simplicity</li>
+        <li># Speed</li>
+        <li># Focus</li>
+        <li># Privacy</li>
+    </ul>
+</section>
+
+<!-- FUTURE -->
+<section class="container my-5 py-3">
+    <h2 class="heading-premium text-center mb-4" style="font-size:6vh;"> We're Just Getting Started</h2>
+    <p class="lead text-center  px-md-5">
+        The app will continue to evolve — with more powerful features while keeping the experience simple, smooth and minimal.
+    </p>
+</section>
+
+<!-- CTA -->
+<section class="text-center my-5 py-5" style="background:#f6f4ff; color:black;">
+    <h2 class="fw-bold mb-3">Ready to organize your day better?</h2>
+    <p class="lead mb-4">Start building productive habits — one task at a time.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary px-4 py-2" style="font-size:20px;">
+        Start Using The App 
+    </a>
+</section>
+
+{% endblock contant %}

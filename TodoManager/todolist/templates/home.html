@@ -1,0 +1,59 @@
+{% extends "main.html" %}
+{% load static %}
+
+
+
+{% block title %}
+Home page
+{% endblock title %}
+ 
+  
+{% block contant %}
+ <!-- Poster / Banner -->
+  <section class="text-center">
+    <img src="{% static 'image/banner.jpg' %}" class="img-fluid w-100" style="max-height: 300px; object-fit: cover;">
+  </section>
+
+
+<section class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Why choose our To-Do App?</h2>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card shadow p-3 border-0 my-2" style="background:#2c2c2c; color:white; border-radius:12px;">
+        <h4 class="fw-bold">Stay Organized</h4>
+        <p>Track all your tasks in one place and boost your productivity.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow p-3 border-0 my-2" style="background:#2c2c2c; color:white; border-radius:12px;">
+        <h4 class="fw-bold">Set Priorities</h4>
+        <p>Focus on the most important tasks and manage time effectively.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow p-3 border-0 my-2" style="background:#2c2c2c; color:white; border-radius:12px;">
+        <h4 class="fw-bold">Never Forget</h4>
+        <p>Update, delete & mark tasks as completed anytime, anywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Get Started Button -->
+  <div class="text-center mb-5">
+    {% if user.is_authenticated %}
+     <form action="{% url 'todolist' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark px-4 py-2" style="font-size: 18px; font-weight: 600;">Get Started</button>
+    </form>
+    {% else %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark px-4 py-2" style="font-size: 18px; font-weight: 600;">Get Started</button>
+    </form>
+    {% endif %}
+  </div>
+{% endblock contant %}

@@ -1,0 +1,55 @@
+ body {
+background: linear-gradient(135deg, #3a0ca3, #7209b7, #240046);
+
+     color: #ffffff !important;
+ }
+
+ .login-card {
+     border-radius: 15px;
+     padding: 35px;
+     max-width: 420px;
+     width: 100%;
+     color: rgb(255, 255, 255);
+ }
+
+ .login-card button {
+     font-size: 18px;
+     font-weight: 600;
+ }
+
+ .login-card input {
+     border: none;
+     color: rgb(0, 0, 0);
+ }
+
+ .login-card input::placeholder {
+     color: #bfbfbf;
+ }
+
+ .login-card input:focus {
+     box-shadow: none;
+ }
+
+ .register-card {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 12px;
+        padding: 35px;
+        color: white;
+    }
+.heading-premium {
+    font-weight: 900;
+    font-size: 54px;
+    background: linear-gradient(90deg, #00eaff, #00c2ff, #00ff95, #00ffea);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 768px) {
+    .heading-premium {
+        font-size: 38px;
+    }
+}
+
+

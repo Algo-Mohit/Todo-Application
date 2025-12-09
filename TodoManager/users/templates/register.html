@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% load static %}
+
+
+{% block title %}
+Registration Page
+{% endblock title %}
+
+{% block contant %}
+<div class="d-flex justify-content-center align-items-center" style="min-height:100vh;">
+    <div class="register-card shadow-lg mx-4">
+        
+        <h2 class="text-center mb-4 fw-bold">Create Account</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ register_form.as_p }}
+            <button type="submit" class="btn btn-success w-100 mt-2">Register</button>
+        </form>
+
+        <p class="mt-3 text-center">
+            Already have an account? 
+            <a href="{% url 'login' %}" class="text-info" style="text-decoration:none;">Login</a>
+        </p>
+
+    </div>
+</div>
+{% endblock contant %}

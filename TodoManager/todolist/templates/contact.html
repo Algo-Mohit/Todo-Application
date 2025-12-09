@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block contant %}
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-4">📩 Contact Us</h2>
+    <p class="text-center mb-5">Have questions? Feedback? We're happy to help!</p>
+
+    <div class="row">
+
+        <!-- Contact Info Left Box -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow p-4 border-0 h-100">
+                <h4 class="fw-bold mb-3">📞 Contact Information</h4>
+
+                <p><strong>Email:</strong> mohitpareek88515@gmail.com</p>
+                <p><strong>Mobile:</strong> +91 8769672576</p>
+                <p><strong>Location:</strong> Bhilwara, Rajasthan, India</p>
+
+                <hr>
+
+                <h5 class="fw-bold mb-3"> 🔗 Social Profiles</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="https://www.linkedin.com/in/mohit-pareek-848aab291/" style="color: rgb(16, 98, 220); text-decoration: none;" target="_blank">🔗 LinkedIn Profile</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://github.com/Algo-Mohit" style="color: rgb(16, 98, 220);; text-decoration: none;" target="_blank">💻 GitHub Profile</a>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h5 class="fw-bold mb-3">⏱ Available Time</h5>
+                <p>Monday – Saturday</p>
+                <p>10:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Contact Form Right -->
+        <div class="col-md-8 mb-4">
+            <div class="card shadow p-4 border-0 h-100">
+                <h4 class="fw-bold mb-3">Send a Message</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Your Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" class="form-control" rows="4" placeholder="Write your message..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+
+                {% if success %}
+                    <div class="alert alert-success mt-3">Thanks! Your message has been sent successfully.</div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock contant %}

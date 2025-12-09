@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block title %}{{page}} Edit page {% endblock title %}
+
+{% block contant %}
+{% if task1.owner == user %}
+<form method="post" class="w-100 d-flex justify-content-center mt-4">
+  {% csrf_token %}
+  <div class="input-group" style="max-width: 450px;">
+      <input type="text" class="form-control" name="task_name" placeholder="{{task1.task_name}}" value="{{task1.task_name}}" required>
+      <input type="hidden"  name="is_completed"  value="{{task1.is_completed}}">
+
+      <button type="submit" class="btn btn-dark"
+        style=" color: white; font-weight: 500;">
+        Update task
+      </button>
+  </div>
+</form>
+{% else %}
+<h3>You are not allow to edit task !!</h3>
+{% endif %}
+
+{% endblock contant %}

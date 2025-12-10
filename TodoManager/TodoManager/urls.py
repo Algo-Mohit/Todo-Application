@@ -16,8 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from django.http import HttpResponse
-from users.create_super import create_admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +25,3 @@ urlpatterns = [
 
 
 
-urlpatterns += [
-    path('makeadmin/', lambda request: HttpResponse(create_admin())),
-]

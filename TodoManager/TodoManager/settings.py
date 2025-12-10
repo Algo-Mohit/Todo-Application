@@ -61,23 +61,23 @@ WSGI_APPLICATION = 'TodoManager.wsgi.application'
 # Database
 # Use DATABASE_URL env var (recommended: Postgres on Render). Fallback to local MySQL only for dev.
 DATABASE_URL = os.getenv("DATABASE_URL")
+
 if DATABASE_URL:
     DATABASES = {
-        "default": dj_database_url.parse(DATABASE_URL, conn_max_age=600, ssl_require=True)
+        "default": dj_database_url.parse(DATABASE_URL, conn_max_age=600)
     }
 else:
-    # fallback (your previous local MySQL) - only for local dev
+    # LOCAL MySQL (only on your laptop)
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.getenv("MYSQL_DATABASE", "todoDB"),
-            'USER': os.getenv("MYSQL_USER", "root"),
-            'PASSWORD': os.getenv("MYSQL_PASSWORD", ""),
-            'HOST': os.getenv("MYSQL_HOST", "localhost"),
-            'PORT': os.getenv("MYSQL_PORT", "3306"),
+            'NAME': 'todoDB',
+            'USER': 'root',
+            'PASSWORD': 'Mohit@123',
+            'HOST': 'localhost',
+            'PORT': '3306',
         }
     }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},

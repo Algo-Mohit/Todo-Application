@@ -12,8 +12,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-local-dev-key")  # change on Render via env var
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-# Allowed hosts: set a comma-separated env var e.g. "your-app.onrender.com,localhost"
-ALLOWED_HOSTS = [h.strip() for h in os.getenv("ALLOWED_HOSTS", "*").split(",") if h.strip()]
+ALLOWED_HOSTS = ['todo-application-glo0.onrender.com']
+
 
 # Applications
 INSTALLED_APPS = [
